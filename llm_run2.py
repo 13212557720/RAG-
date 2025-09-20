@@ -88,6 +88,7 @@ if user_query:                                                              # å¤
                     llm = ChatOpenAI(
                         model="deepseek-chat",
                         base_url='https://api.deepseek.com/v1',
+                        api_key=st.secrets["KEY"],
                         temperature=0.1
                     )
 
@@ -123,6 +124,7 @@ if user_query:                                                              # å¤
                     llm = ChatOpenAI(
                         model="deepseek-chat",
                         base_url='https://api.deepseek.com/v1',
+                        api_key=st.secrets["KEY"],
                         temperature=0.7
                     )
                     response = llm.invoke(user_query)
